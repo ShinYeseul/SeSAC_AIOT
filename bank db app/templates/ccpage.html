@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css') }}">
+</head>
+<body>
+
+    <h1>aiot 은행</h1>
+
+
+    <form action="/ccpage" method="post" class="form">
+        <div class="job-title">고객 생성</div>
+
+        <p>생성할 고객 아이디를 입력해 주세요</p>
+
+        <div>
+            <label for="cId">고객아이디:</label>
+            <input type="text" id="cId" name="cId" />
+        </div>
+
+        <div>
+            <label for="cId">고객이름:</label>
+            <input type="text" id="cName" name="cName" />
+        </div>
+
+        <div class="button">
+            <button type="submit">고객 생성</button>
+        </div>
+    </form>
+</body>
+</html>

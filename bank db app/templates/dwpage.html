@@ -1,0 +1,65 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <script>
+            alert("{{messages[-1]}}")
+        </script>
+    {% endif %}
+{% endwith %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css') }}">
+</head>
+<body>
+
+    <h1>aiot 은행</h1>
+
+
+    <form action="/dwpage/{{c_id}}/{{a_num}}" method="post" class="form">
+        <h2>입금 & 출금</h2>
+        <p>고객 아이디와 입출금 옵션을 입력하여 주세요</p>
+
+        <div class="job-title">원하는 옵션을 선택해 주세요</div>
+        <select name="option" id="option" class="select">
+            <option value="0" selected>입금</option>
+            <option value="1" >출금</option>
+        </select>
+        {% if c_id != 'nan' %}
+        <div>
+            <label for="cId">고객아이디:</label>
+            <input type="text" id="cId_v" name="cId" value="{{c_id}}"/>
+        </div>
+        {% else %}
+        <div>
+            <label for="cId">고객아이디:</label>
+            <input type="text" id="cId" name="cId"/>
+        </div>
+        {% endif %}
+        {% if a_num != 'nan' %}
+        <div>
+            <label for="aNum">계좌번호:</label>
+            <input type="text" id="aNum_v" name="aNum" value="{{a_num}}"/>
+        </div>
+        {% else %}
+        <div>
+            <label for="aNum">계좌번호:</label>
+            <input type="text" id="aNum" name="aNum" />
+        </div>
+        {% endif %}
+
+        <div>
+            <label for="amount">금액:</label>
+            <input type="number" id="amount" name="amount" />
+        </div>
+        <div class="button">
+            <button type="submit">입&출금 진행</button>
+        </div>
+    </form>
+</body>
+</html>

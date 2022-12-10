@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78e94dcd-3ff9-4d07-9970-c2c5d3d7712c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/aiot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/aiot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../221103/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../221103/testdir/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../221105/bank1_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../221105/bank1_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../221112/expickle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../221112/expickle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aistore app/static/inventory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../aistore app/static/inventory.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aistoremodel/tmp/aistore.db" beforeDir="false" afterPath="$PROJECT_DIR$/../aistoremodel/tmp/aistore.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python db/sqlalchemyexm.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../python db/sqlalchemyexm.ipynb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IJmfFA2jGu0x2TMhsc5gkWfsp6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/yeseulsin/Desktop/p/aiot/bank db app"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78e94dcd-3ff9-4d07-9970-c2c5d3d7712c" name="Changes" comment="" />
+      <created>1669908163220</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669908163220</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

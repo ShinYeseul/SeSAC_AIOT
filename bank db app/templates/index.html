@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css') }}">
+</head>
+<body>
+
+    <h1>aiot 은행</h1>
+    <h2>aiot 은행관리 사이트에 오신걸 환영합니다</h2>
+
+    <p>aiot 은행 관리사이트는 입출금 서비스와 고객 관리 기능을 제공하는 사이트입니다. </p>
+    <ul>
+        <li>Email: <a href="mailto:aiot@example.com">aiot@example.com</a></li>
+        <li>Web: <a href="http://example.com">http://example.com</a></li>
+        <li>Tel: 123 45678</li>
+    </ul>
+    <div class="job-title">원하는 옵션을 선택해 주세요</div>
+    <form action="/" method="post">
+        <select name="option" id="option" class="select" >
+            <option value="0" selected>고객 생성</option>
+            <option value="1" >계좌 생성</option>
+            <option value="2">입출금 옵션</option>
+            <option value="3">고객 보기</option>
+        </select>
+
+        <div >
+            <button class="button" type="submit">옵션 선택</button>
+        </div>
+    </form>
+
+</body>
+</html>

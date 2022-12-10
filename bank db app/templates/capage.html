@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css') }}">
+</head>
+<body>
+
+    <h1>aiot 은행</h1>
+
+
+    <form action="/capage" method="post" class="form">
+        <div class="job-title">계좌 생성</div>
+
+        <p>고객 아이디와 생성 계좌번호를 입력해 주세요</p>
+        <div>
+            {{ form.c_id.label }}{{ form.c_id }}
+        </div>
+        <div>
+            {{ form.a_num.label }}{{ form.a_num }}
+        </div>
+        <div class="button">
+            <button type="submit">계좌 생성</button>
+        </div>
+    </form>
+</body>
+</html>

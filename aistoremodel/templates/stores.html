@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="py-3 text-center">
+        <div class="col-lg-6 mx-auto">
+            <h2>스토어 목록</h2>
+            <p class="lead mb-4">스토어 목록을 통해 모든 지점의 정보를 볼수 있습니다. 아이디 검색을 통해 원하는 스토어를 찾을수 있습니다.</p>
+        </div>
+    </div>
+
+    <form class="form-inline" action="/stores" method="post">
+        <div class="mb-3">
+            <label for="sId" class="form-label">지점 아이디로 검색</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="sId" name ="sId"  placeholder="스토어 아이디">
+                <button type="submit" class="btn btn-outline-secondary">지점 검색</button>
+            </div>
+        </div>
+    </form>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Locate</th>
+                <th scope="col">Products</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for s in stores %}
+            <tr>
+                <th scope="row">{{ s.s_id }}</th>
+                <td>{{ s.name }}</td>
+                <td>{{ s.locate }}</td>
+                <td>{{ s.products_num }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

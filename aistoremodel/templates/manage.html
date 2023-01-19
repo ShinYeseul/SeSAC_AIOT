@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if s_id == 'nan' %}
+    <div class="py-3 text-center">
+      <h2>재고 관리</h2>
+      <p class="lead">스토어 아이디를 입력하여 재고를 등록하고 관리하세요.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <form class="col-4 p-md-5 border rounded-3 bg-light" action="/manage/{{ s_id }}" method="post">
+            <div class="mb-3">
+                <label for="sId" class="form-label">스토어 아이디</label>
+                <input type="text" class="form-control" id="sId" aria-describedby="sIdHelp" name="sId">
+                <div id="sIdHelp" class="form-text">스토어 접속을 위한 아이디 입력.</div>
+            </div>
+            <div class="mb-3">
+                <label for="sPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="sPassword" name="sPassword">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    {% else %}
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+            <h3>재고 현황</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">상품Id</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col">가격</th>
+                        <th scope="col">재고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for p in inventory %}
+                    <tr>
+                        <th scope="row">{{ p.p_id }}</th>
+                        <td>{{ p.p_name }}</td>
+                        <td>{{ p.price }}</td>
+                        <td>{{ p.count }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+            <h3>재고 등록</h3>
+            <form class="p-4 p-md-5 border rounded-3 bg-light" action="/manage/{{ s_id }}" method="post">
+                <div class="mb-3">
+                    <label for="pId" class="form-label">상품 아이디</label>
+                    <input type="text" class="form-control" id="pId" name="pId">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">상품 가격</label>
+                    <input type="text" class="form-control" id="price" name="price">
+                </div>
+                <div class="mb-3">
+                    <label for="count" class="form-label">추가 개수</label>
+                    <input type="text" class="form-control" id="count" name="count">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <h3>등록 가능 품목</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">상품Id</th>
+                <th scope="col">상품명</th>
+                <th scope="col">추천 가격</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for p in products %}
+            <tr>
+                <th scope="row">{{ p.p_id }}</th>
+                <td>{{ p.name }}</td>
+                <td>{{ p.reco_price }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+{% endblock %}

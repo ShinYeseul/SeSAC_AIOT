@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if s_id == 'nan' %}
+    <div class="py-3 text-center">
+      <h2>스토어 시작</h2>
+      <p class="lead">스토어 아이디를 입력하여 스토어를 시작하세요.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <form class="col-4 p-md-5 border rounded-3 bg-light" action="/board/{{ s_id }}" method="post">
+            <div class="mb-3">
+                <label for="sId" class="form-label">스토어 아이디</label>
+                <input type="text" class="form-control" id="sId" aria-describedby="sIdHelp" name="sId">
+                <div id="sIdHelp" class="form-text">스토어 접속을 위한 아이디 입력.</div>
+            </div>
+            <div class="mb-3">
+                <label for="sPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="sPassword" name="sPassword">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    {% else %}
+    <div class="py-3 text-center">
+      <h2>AiStore</h2>
+      <p class="lead">원하는 상품을 구매해 주세요.</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {% for p in menu %}
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">상품명: {{ p.p_name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">가격: {{ p.price }}</h6>
+                    <p class="card-text">남은개수: {{ p.count }}</p>
+                    <div class="text-end">
+                        <a href="{{ url_for('buy', s_id = s_id, p_id = p.p_id)}}" class="btn btn-secondary">구매하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endblock %}
+
+
+

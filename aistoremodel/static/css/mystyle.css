@@ -1,0 +1,101 @@
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 1em;
+}
+
+h1 {
+    color: #375e97;
+    font-size: 2em;
+    border-bottom: 1px solid #375e97;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+.job-title {
+    color: #999999;
+    font-weight: bold;
+
+    margin-top: 1em;
+
+}
+
+a:link, a:visited {
+    color: #fb6542;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.form {
+  /* Center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+.select {
+  width: 150px;
+  height: 35px;
+  padding: 5px 30px 5px 10px;
+  border-radius: 4px;
+  outline: 0 none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form li + li {
+    margin-top: 1em;
+}
+
+label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+
+    /* Match form field borders */
+    border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+    border-color: #000;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* Provide space to type some text */
+    height: 5em;
+}
+
+.button {
+  /* Align buttons with the text fields */
+    margin-top: 0.5em;
+}
+
+.form .button {
+    margin-left: auto;
+}
